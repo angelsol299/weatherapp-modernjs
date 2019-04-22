@@ -21,7 +21,10 @@ const getCity = async city => {
 };
 
 getCity("stockholm")
-  .then(data => console.log(data))
+  .then(data => {
+    return getWeather(data.Key);
+  })
+  .then(data => {
+    console.log(data);
+  })
   .catch(err => console.log(err));
-
-getWeather("314929");
