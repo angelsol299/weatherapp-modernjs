@@ -25,6 +25,6 @@ getCity("stockholm")
     return getWeather(data.Key);
   })
   .then(data => {
-    console.log(data);
+    console.log("pre loaded city: ", data);
   })
   .catch(err => console.log(err));
