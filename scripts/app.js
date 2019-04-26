@@ -7,6 +7,14 @@ const updateUI = data => {
   const weather = data.weather;
 
   //updating details  template
+  details.innerHTML = `
+  <h5 class="my-3">${cityDets.EnglishName}</h5>
+  <div class="my-3">${weather.WeatherText}</div>
+  <div class="display-4 my-4">
+    <span>${weather.Temperature.Metric.Value}</span>
+    <span>&deg;C</span>
+  </div>
+  `;
 };
 
 const updateCity = async city => {
